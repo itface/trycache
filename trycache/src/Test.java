@@ -1,13 +1,13 @@
-import java.io.File;
 
 
 public class Test {
 
 	public static void  main(String[] args){
-		System.out.println(test4());
-		System.out.println(1);
-		System.out.println(test3());
-		System.out.println(4);
+		System.out.println(test()+"@0");
+		System.out.println(test1()+"@1");
+		System.out.println(test11()+"@11");
+		System.out.println(test111()+"@111");
+		System.out.println(test2()+"@2");
 		
 	}
 	private static int test(){
@@ -15,12 +15,41 @@ public class Test {
 		try {
 			i=i/0;
 		} catch (Exception e) {
-			i=99;
 			e.printStackTrace();
 			return 79;
 		}finally{
-			i=69;
 			return 59;
+		}
+		//return i;
+	}
+	private static int test1(){
+		int i=100;
+		try {
+			i=i/0;
+		} catch (Exception e) {
+			i=99;
+			e.printStackTrace();
+			return i;
+		}finally{
+			i=69;
+			return i;
+		}
+		//return i;
+	}
+	private static int test11(){
+		try {
+			return 1;
+		} finally{
+			return 2;
+		}
+		//return i;
+	}
+	private static int test111(){
+		int i=100;
+		try {
+			return i;
+		}finally{
+			i++;
 		}
 		//return i;
 	}
